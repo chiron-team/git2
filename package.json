@@ -1,0 +1,25 @@
+{
+  "name": "dasdas",
+  "version": "1.0.0",
+  "description": "A modern HTML/CSS static website project",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve",
+    "dev": "npx serve",
+    "lint:css": "npx stylelint \"css/**/*.css\"",
+    "lint:html": "npx htmlhint \"*.html\"",
+    "format": "npx prettier --write \"**/*.{html,css,js,json,md}\"",
+    "validate": "npm run lint:html && npm run lint:css"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "website",
+    "static-site",
+    "boilerplate"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}

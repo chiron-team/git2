@@ -1,0 +1,78 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Editor Directories and Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Log Files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary Files
+*.tmp
+*.temp
+.cache/
+
+# Build Output (if you add build tools later)
+dist/
+build/
+out/
+.output/
+
+# Dependency Directories (if you add package managers later)
+node_modules/
+bower_components/
+jspm_packages/
+
+# Package Manager Lock Files (optional - uncomment if needed)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Environment Variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Backup Files
+*.bak
+*.backup
+*~
+
+# Compressed Files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Coverage Directory
+coverage/
+*.lcov
+.nyc_output/
+
+# Documentation (if auto-generated)
+# docs/
+
+# Static Analysis
+.eslintcache
+.stylelintcache
