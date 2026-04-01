@@ -234,6 +234,58 @@ p {
     margin-bottom: var(--spacing-lg);
 }
 
+.about__facts-title {
+    font-size: var(--font-size-2xl);
+    color: var(--color-gray-900);
+    margin-top: var(--spacing-2xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.about__facts {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    padding: 0;
+    margin: 0;
+}
+
+.about__fact {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-base);
+    padding: var(--spacing-xl);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.about__fact:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: var(--shadow-lg);
+}
+
+.about__fact-icon {
+    font-size: var(--font-size-3xl);
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.about__fact-body {
+    font-size: var(--font-size-base);
+    color: var(--color-gray-600);
+    line-height: var(--line-height-relaxed);
+}
+
+.about__fact-heading {
+    display: block;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-gray-900);
+    margin-bottom: var(--spacing-sm);
+}
+
 /* ===========================
    Services Section
    =========================== */
