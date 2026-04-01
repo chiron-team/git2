@@ -42,6 +42,9 @@
                         <a href="#services" class="nav__link">Services</a>
                     </li>
                     <li class="nav__item">
+                        <a href="#counter" class="nav__link">Counter</a>
+                    </li>
+                    <li class="nav__item">
                         <a href="#contact" class="nav__link">Contact</a>
                     </li>
                 </ul>
@@ -118,19 +121,43 @@
         </section>
 
         <!-- Counter Section -->
-        <section id="counter" class="section">
+        <section id="counter" class="section section--light">
             <div class="container">
                 <h2 class="section__title">Counter</h2>
-                <div class="counter">
-                    <button class="counter__btn counter__btn--decrement" id="counter-decrement" aria-label="Decrease count">&#8722;</button>
-                    <output class="counter__display" id="counter-display" aria-live="polite" aria-atomic="true">0</output>
-                    <button class="counter__btn counter__btn--increment" id="counter-increment" aria-label="Increase count">&#43;</button>
+                <div class="counter-card">
+                    <p class="counter-card__hint">Use the buttons below to adjust the count</p>
+                    <div class="counter">
+                        <button
+                            class="counter__btn counter__btn--decrement"
+                            id="counter-decrement"
+                            aria-label="Decrease count by 1"
+                        >&#8722;</button>
+                        <div class="counter__display-wrapper">
+                            <output
+                                class="counter__display"
+                                id="counter-display"
+                                aria-live="polite"
+                                aria-atomic="true"
+                            >0</output>
+                            <span class="counter__label">Current Count</span>
+                        </div>
+                        <button
+                            class="counter__btn counter__btn--increment"
+                            id="counter-increment"
+                            aria-label="Increase count by 1"
+                        >&#43;</button>
+                    </div>
+                    <div class="counter__actions">
+                        <button class="btn btn--outline" id="counter-reset" aria-label="Reset count to zero">
+                            Reset
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="section section--light">
+        <section id="contact" class="section">
             <div class="container">
                 <h2 class="section__title">Contact</h2>
                 <div class="contact">
