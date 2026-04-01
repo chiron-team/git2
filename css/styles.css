@@ -275,6 +275,72 @@ p {
 }
 
 /* ===========================
+   Counter Section
+   =========================== */
+
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xl);
+}
+
+.counter__display {
+    min-width: 6rem;
+    font-size: var(--font-size-5xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-gray-900);
+    text-align: center;
+    line-height: var(--line-height-tight);
+}
+
+.counter__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    border-radius: var(--radius-full);
+    border: 2px solid transparent;
+    transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.counter__btn--increment {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.counter__btn--increment:hover {
+    background-color: var(--color-primary-dark);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.counter__btn--increment:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.counter__btn--decrement {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.counter__btn--decrement:hover {
+    background-color: var(--color-gray-100);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.counter__btn--decrement:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* ===========================
    Contact Section
    =========================== */
 

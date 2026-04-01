@@ -123,6 +123,30 @@ const initScrollSpy = () => {
 };
 
 // ===========================
+// Counter
+// ===========================
+
+const initCounter = () => {
+    const decrementBtn = document.querySelector('#counter-decrement');
+    const incrementBtn = document.querySelector('#counter-increment');
+    const display = document.querySelector('#counter-display');
+
+    if (!decrementBtn || !incrementBtn || !display) return;
+
+    let count = 0;
+
+    incrementBtn.addEventListener('click', () => {
+        count += 1;
+        display.textContent = count;
+    });
+
+    decrementBtn.addEventListener('click', () => {
+        count -= 1;
+        display.textContent = count;
+    });
+};
+
+// ===========================
 // Form Handling
 // ===========================
 
@@ -211,6 +235,7 @@ const init = () => {
     initMobileNav();
     initSmoothScroll();
     initScrollSpy();
+    initCounter();
     initFormHandling();
     initHeaderScroll();
     initAnimations();
