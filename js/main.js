@@ -21,7 +21,7 @@ const initMobileNav = () => {
     });
 
     // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
+    document.addEventListener('click', e => {
         if (!e.target.closest('.nav')) {
             navMenu.classList.remove('is-open');
             navToggle.setAttribute('aria-expanded', 'false');
@@ -29,7 +29,7 @@ const initMobileNav = () => {
     });
 
     // Close menu on escape key
-    document.addEventListener('keydown', (e) => {
+    document.addEventListener('keydown', e => {
         if (e.key === 'Escape' && navMenu.classList.contains('is-open')) {
             navMenu.classList.remove('is-open');
             navToggle.setAttribute('aria-expanded', 'false');
@@ -45,9 +45,9 @@ const initSmoothScroll = () => {
     const links = document.querySelectorAll('a[href^="#"]');
 
     links.forEach(link => {
-        link.addEventListener('click', (e) => {
+        link.addEventListener('click', e => {
             const href = link.getAttribute('href');
-            
+
             // Skip if it's just "#"
             if (href === '#') return;
 
@@ -62,7 +62,7 @@ const initSmoothScroll = () => {
 
             window.scrollTo({
                 top: offsetPosition,
-                behavior: 'smooth'
+                behavior: 'smooth',
             });
 
             // Close mobile menu if open
@@ -83,7 +83,7 @@ const initSmoothScroll = () => {
 // Update Active Navigation Link
 // ===========================
 
-const updateActiveLink = (activeLink) => {
+const updateActiveLink = activeLink => {
     const navLinks = document.querySelectorAll('.nav__link');
     navLinks.forEach(link => {
         link.classList.remove('nav__link--active');
@@ -102,15 +102,15 @@ const initScrollSpy = () => {
     const observerOptions = {
         root: null,
         rootMargin: '-20% 0px -80% 0px',
-        threshold: 0
+        threshold: 0,
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const id = entry.target.getAttribute('id');
                 const correspondingLink = document.querySelector(`.nav__link[href="#${id}"]`);
-                
+
                 if (correspondingLink) {
                     navLinks.forEach(link => link.classList.remove('nav__link--active'));
                     correspondingLink.classList.add('nav__link--active');
@@ -180,7 +180,7 @@ const initFormHandling = () => {
 
     if (!contactForm) return;
 
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', e => {
         e.preventDefault();
 
         // Get form data
@@ -191,7 +191,7 @@ const initFormHandling = () => {
         console.log('Form submitted:', data);
 
         // Show success message (you can customize this)
-        alert('Thank you for your message! We\'ll get back to you soon.');
+        alert("Thank you for your message! We'll get back to you soon.");
 
         // Reset form
         contactForm.reset();
@@ -227,27 +227,32 @@ const initHeaderScroll = () => {
 // ===========================
 
 const initAnimations = () => {
-    const animatedElements = document.querySelectorAll('.service-card, .about, .contact-form');
+    const animatedElements = document.querySelectorAll(
+        '.service-card, .about__intro, .about__fact, .contact-form'
+    );
 
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.1
+        threshold: 0.1,
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    animatedElements.forEach(element => {
+    animatedElements.forEach((element, index) => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(20px)';
-        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        // Stagger fact cards by their position in the list
+        const delay = element.classList.contains('about__fact') ? `${index * 0.05}s` : '0s';
+        element.style.transition = `opacity 0.6s ease ${delay}, transform 0.6s ease ${delay}`;
         observer.observe(element);
     });
 };

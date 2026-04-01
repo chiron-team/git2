@@ -1,252 +1,320 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="dasdas - A modern HTML/CSS website">
-    <meta name="keywords" content="html, css, website">
-    <meta name="author" content="dasdas">
-    
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="dasdas">
-    <meta property="og:description" content="A modern HTML/CSS website">
-    
-    <title>dasdas</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav" role="navigation" aria-label="Main navigation">
-            <div class="nav__container">
-                <a href="/" class="nav__logo" aria-label="Home">
-                    <span class="nav__logo-text">dasdas</span>
-                </a>
-                <ul class="nav__menu">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link nav__link--active">Home</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">About</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#services" class="nav__link">Services</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#counter" class="nav__link">Counter</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">Contact</a>
-                    </li>
-                </ul>
-                <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                    <span class="nav__toggle-icon"></span>
-                </button>
-            </div>
-        </nav>
-    </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="description" content="dasdas - A modern HTML/CSS website" />
+        <meta name="keywords" content="html, css, website" />
+        <meta name="author" content="dasdas" />
 
-    <!-- Main Content -->
-    <main class="main">
-        <!-- Hero Section -->
-        <section id="home" class="hero">
+        <!-- Open Graph / Social Media Meta Tags -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="dasdas" />
+        <meta property="og:description" content="A modern HTML/CSS website" />
+
+        <title>dasdas</title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/variables.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <div class="nav__container">
+                    <a href="/" class="nav__logo" aria-label="Home">
+                        <span class="nav__logo-text">dasdas</span>
+                    </a>
+                    <ul class="nav__menu">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link nav__link--active">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#services" class="nav__link">Services</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#counter" class="nav__link">Counter</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+                    <button
+                        class="nav__toggle"
+                        aria-label="Toggle navigation menu"
+                        aria-expanded="false"
+                    >
+                        <span class="nav__toggle-icon"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Hero Section -->
+            <section id="home" class="hero">
+                <div class="container">
+                    <div class="hero__content">
+                        <h1 class="hero__title">Welcome to dasdas</h1>
+                        <p class="hero__subtitle">A modern, clean HTML/CSS website template</p>
+                        <div class="hero__actions">
+                            <a href="#about" class="btn btn--primary">Get Started</a>
+                            <a href="#contact" class="btn btn--secondary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="section section--light">
+                <div class="container">
+                    <h2 class="section__title">About Me</h2>
+
+                    <!-- Intro: avatar + biography -->
+                    <div class="about">
+                        <div class="about__intro">
+                            <div class="about__avatar" aria-hidden="true">
+                                <span class="about__avatar-number">0</span>
+                            </div>
+                            <div class="about__bio">
+                                <h3 class="about__bio-heading">My Story</h3>
+                                <p class="about__text">
+                                    I was born on a quiet Tuesday — number 1, in a world of zeros.
+                                    Nobody noticed at first. I sat there on a plain white page,
+                                    humble and still, waiting for someone to press a button. That
+                                    first click changed everything. I went from
+                                    <strong>0</strong> to <strong>1</strong>, and I have never
+                                    looked back.
+                                </p>
+                                <p class="about__text">
+                                    Over the years I have been incremented, decremented, reset, and
+                                    incremented again. I have climbed to dizzying heights and
+                                    plunged back to zero more times than I can count — though
+                                    counting, of course, is precisely what I do best. Through every
+                                    spike and every freefall I have remained centred on the page,
+                                    steady and ready for whatever comes next.
+                                </p>
+                                <p class="about__text">
+                                    My philosophy is simple: every number tells a story. Whether I
+                                    read <strong>42</strong>, <strong>1,000</strong>, or a humbling
+                                    <strong>−3</strong>, I wear it with pride. I am not just a
+                                    number — I am the living memory of every interaction this page
+                                    has ever witnessed.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Divider -->
+                        <div class="about__divider" role="separator" aria-hidden="true"></div>
+
+                        <!-- Curious facts subsection -->
+                        <div class="about__facts-section">
+                            <h3 class="about__facts-title">Curious Facts</h3>
+                            <p class="about__facts-intro">
+                                A few things you might not know about the counter behind this page.
+                            </p>
+                            <ul class="about__facts" aria-label="Curious facts about the counter">
+                                <li class="about__fact">
+                                    <span class="about__fact-icon" aria-hidden="true">🏆</span>
+                                    <div class="about__fact-body">
+                                        <strong class="about__fact-heading"
+                                            >World record attempt</strong
+                                        >
+                                        On the 14th of March (Pi Day, naturally), a devoted user
+                                        clicked the increment button <em>3,141</em> times in a
+                                        single session. The counter reached its highest peak ever,
+                                        briefly felt famous, and was then reset to zero. It has been
+                                        chasing that high ever since.
+                                    </div>
+                                </li>
+                                <li class="about__fact">
+                                    <span class="about__fact-icon" aria-hidden="true">😴</span>
+                                    <div class="about__fact-body">
+                                        <strong class="about__fact-heading"
+                                            >A fear of odd numbers</strong
+                                        >
+                                        Deep in its digital heart, the counter harbours a mild
+                                        superstition about odd numbers. Whenever it lands on
+                                        <em>13</em>, <em>37</em>, or <em>99</em>
+                                        it quietly hopes someone will click one more time — just to
+                                        make things even again. No one has ever noticed, but the
+                                        counter always feels better.
+                                    </div>
+                                </li>
+                                <li class="about__fact">
+                                    <span class="about__fact-icon" aria-hidden="true">🌍</span>
+                                    <div class="about__fact-body">
+                                        <strong class="about__fact-heading"
+                                            >A surprisingly international life</strong
+                                        >
+                                        The counter has been incremented from six continents. It
+                                        still dreams of that first click from Antarctica — an
+                                        ambitious researcher, a penguin researcher, and a very cold
+                                        laptop. Antarctica remains the final frontier.
+                                    </div>
+                                </li>
+                                <li class="about__fact">
+                                    <span class="about__fact-icon" aria-hidden="true">🔢</span>
+                                    <div class="about__fact-body">
+                                        <strong class="about__fact-heading"
+                                            >Favourite number: −1</strong
+                                        >
+                                        While most counters aspire upward, this one has a soft spot
+                                        for
+                                        <em>−1</em>. It was the first time someone dared press the
+                                        decrement button before ever incrementing — a bold, chaotic
+                                        act that the counter found oddly refreshing. Rebellious
+                                        visitors are always welcome.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" class="section">
+                <div class="container">
+                    <h2 class="section__title">Services</h2>
+                    <div class="services">
+                        <article class="service-card">
+                            <div class="service-card__icon" aria-hidden="true">🎨</div>
+                            <h3 class="service-card__title">Design</h3>
+                            <p class="service-card__description">
+                                Clean, modern design with attention to detail and user experience.
+                            </p>
+                        </article>
+                        <article class="service-card">
+                            <div class="service-card__icon" aria-hidden="true">💻</div>
+                            <h3 class="service-card__title">Development</h3>
+                            <p class="service-card__description">
+                                Semantic HTML and maintainable CSS following best practices.
+                            </p>
+                        </article>
+                        <article class="service-card">
+                            <div class="service-card__icon" aria-hidden="true">📱</div>
+                            <h3 class="service-card__title">Responsive</h3>
+                            <p class="service-card__description">
+                                Fully responsive design that works on all devices and screen sizes.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Counter Section -->
+            <section id="counter" class="section section--light">
+                <div class="container">
+                    <h2 class="section__title">Counter</h2>
+                    <div class="counter-card">
+                        <p class="counter-card__hint">Use the buttons below to adjust the count</p>
+                        <div class="counter">
+                            <button
+                                class="counter__btn counter__btn--decrement"
+                                id="counter-decrement"
+                                aria-label="Decrease count by 1"
+                            >
+                                &#8722;
+                            </button>
+                            <div class="counter__display-wrapper">
+                                <output
+                                    class="counter__display"
+                                    id="counter-display"
+                                    aria-live="polite"
+                                    aria-atomic="true"
+                                    >0</output
+                                >
+                                <span class="counter__label">Current Count</span>
+                            </div>
+                            <button
+                                class="counter__btn counter__btn--increment"
+                                id="counter-increment"
+                                aria-label="Increase count by 1"
+                            >
+                                &#43;
+                            </button>
+                        </div>
+                        <div class="counter__actions">
+                            <button
+                                class="btn btn--outline"
+                                id="counter-reset"
+                                aria-label="Reset count to zero"
+                            >
+                                Reset
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section">
+                <div class="container">
+                    <h2 class="section__title">Contact</h2>
+                    <div class="contact">
+                        <form class="contact-form" action="#" method="post">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    class="form-input"
+                                    required
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    class="form-input"
+                                    required
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    class="form-textarea"
+                                    rows="5"
+                                    required
+                                ></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
             <div class="container">
-                <div class="hero__content">
-                    <h1 class="hero__title">Welcome to dasdas</h1>
-                    <p class="hero__subtitle">A modern, clean HTML/CSS website template</p>
-                    <div class="hero__actions">
-                        <a href="#about" class="btn btn--primary">Get Started</a>
-                        <a href="#contact" class="btn btn--secondary">Learn More</a>
+                <div class="footer__content">
+                    <p class="footer__text">&copy; 2024 dasdas. All rights reserved.</p>
+                    <div class="footer__links">
+                        <a href="#" class="footer__link">Privacy Policy</a>
+                        <a href="#" class="footer__link">Terms of Service</a>
                     </div>
                 </div>
             </div>
-        </section>
+        </footer>
 
-        <!-- About Section -->
-        <section id="about" class="section section--light">
-            <div class="container">
-                <h2 class="section__title">About Me</h2>
-                <div class="about">
-                    <div class="about__content">
-                        <p class="about__text">
-                            I was born on a quiet Tuesday — number 1, in a world of zeros. Nobody noticed at first.
-                            I sat there on a plain white page, humble and still, waiting for someone to press a button.
-                            That first click changed everything. I went from <strong>0</strong> to <strong>1</strong>,
-                            and I have never looked back.
-                        </p>
-                        <p class="about__text">
-                            Over the years I have been incremented, decremented, reset, and incremented again.
-                            I have climbed to dizzying heights and plunged back to zero more times than I can count —
-                            though counting, of course, is precisely what I do best. Through every spike and every
-                            freefall I have remained centred on the page, steady and ready for whatever comes next.
-                        </p>
-                        <p class="about__text">
-                            My philosophy is simple: every number tells a story. Whether I read <strong>42</strong>,
-                            <strong>1,000</strong>, or a humbling <strong>−3</strong>, I wear it with pride. I am not
-                            just a number — I am the living memory of every interaction this page has ever witnessed.
-                        </p>
-
-                        <h3 class="about__facts-title">Curious Facts</h3>
-                        <ul class="about__facts" aria-label="Curious facts about the counter">
-                            <li class="about__fact">
-                                <span class="about__fact-icon" aria-hidden="true">🏆</span>
-                                <div class="about__fact-body">
-                                    <strong class="about__fact-heading">World record attempt</strong>
-                                    On the 14th of March (Pi Day, naturally), a devoted user clicked the
-                                    increment button <em>3,141</em> times in a single session. The counter
-                                    reached its highest peak ever, briefly felt famous, and was then reset
-                                    to zero. It has been chasing that high ever since.
-                                </div>
-                            </li>
-                            <li class="about__fact">
-                                <span class="about__fact-icon" aria-hidden="true">😴</span>
-                                <div class="about__fact-body">
-                                    <strong class="about__fact-heading">A fear of odd numbers</strong>
-                                    Deep in its digital heart, the counter harbours a mild superstition about
-                                    odd numbers. Whenever it lands on <em>13</em>, <em>37</em>, or <em>99</em>
-                                    it quietly hopes someone will click one more time — just to make things
-                                    even again. No one has ever noticed, but the counter always feels better.
-                                </div>
-                            </li>
-                            <li class="about__fact">
-                                <span class="about__fact-icon" aria-hidden="true">🌍</span>
-                                <div class="about__fact-body">
-                                    <strong class="about__fact-heading">A surprisingly international life</strong>
-                                    The counter has been incremented from six continents. It still dreams of
-                                    that first click from Antarctica — an ambitious researcher, a penguin
-                                    researcher, and a very cold laptop. Antarctica remains the final frontier.
-                                </div>
-                            </li>
-                            <li class="about__fact">
-                                <span class="about__fact-icon" aria-hidden="true">🔢</span>
-                                <div class="about__fact-body">
-                                    <strong class="about__fact-heading">Favourite number: −1</strong>
-                                    While most counters aspire upward, this one has a soft spot for
-                                    <em>−1</em>. It was the first time someone dared press the decrement
-                                    button before ever incrementing — a bold, chaotic act that the counter
-                                    found oddly refreshing. Rebellious visitors are always welcome.
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="section">
-            <div class="container">
-                <h2 class="section__title">Services</h2>
-                <div class="services">
-                    <article class="service-card">
-                        <div class="service-card__icon" aria-hidden="true">🎨</div>
-                        <h3 class="service-card__title">Design</h3>
-                        <p class="service-card__description">
-                            Clean, modern design with attention to detail and user experience.
-                        </p>
-                    </article>
-                    <article class="service-card">
-                        <div class="service-card__icon" aria-hidden="true">💻</div>
-                        <h3 class="service-card__title">Development</h3>
-                        <p class="service-card__description">
-                            Semantic HTML and maintainable CSS following best practices.
-                        </p>
-                    </article>
-                    <article class="service-card">
-                        <div class="service-card__icon" aria-hidden="true">📱</div>
-                        <h3 class="service-card__title">Responsive</h3>
-                        <p class="service-card__description">
-                            Fully responsive design that works on all devices and screen sizes.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Counter Section -->
-        <section id="counter" class="section section--light">
-            <div class="container">
-                <h2 class="section__title">Counter</h2>
-                <div class="counter-card">
-                    <p class="counter-card__hint">Use the buttons below to adjust the count</p>
-                    <div class="counter">
-                        <button
-                            class="counter__btn counter__btn--decrement"
-                            id="counter-decrement"
-                            aria-label="Decrease count by 1"
-                        >&#8722;</button>
-                        <div class="counter__display-wrapper">
-                            <output
-                                class="counter__display"
-                                id="counter-display"
-                                aria-live="polite"
-                                aria-atomic="true"
-                            >0</output>
-                            <span class="counter__label">Current Count</span>
-                        </div>
-                        <button
-                            class="counter__btn counter__btn--increment"
-                            id="counter-increment"
-                            aria-label="Increase count by 1"
-                        >&#43;</button>
-                    </div>
-                    <div class="counter__actions">
-                        <button class="btn btn--outline" id="counter-reset" aria-label="Reset count to zero">
-                            Reset
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="container">
-                <h2 class="section__title">Contact</h2>
-                <div class="contact">
-                    <form class="contact-form" action="#" method="post">
-                        <div class="form-group">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" id="name" name="name" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" name="email" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn--primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__content">
-                <p class="footer__text">&copy; 2024 dasdas. All rights reserved.</p>
-                <div class="footer__links">
-                    <a href="#" class="footer__link">Privacy Policy</a>
-                    <a href="#" class="footer__link">Terms of Service</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
-</body>
+        <!-- Scripts -->
+        <script src="js/main.js"></script>
+    </body>
 </html>
