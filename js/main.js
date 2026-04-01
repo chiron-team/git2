@@ -129,20 +129,45 @@ const initScrollSpy = () => {
 const initCounter = () => {
     const decrementBtn = document.querySelector('#counter-decrement');
     const incrementBtn = document.querySelector('#counter-increment');
+    const resetBtn = document.querySelector('#counter-reset');
     const display = document.querySelector('#counter-display');
+    const displayWrapper = display ? display.closest('.counter__display-wrapper') : null;
 
-    if (!decrementBtn || !incrementBtn || !display) return;
+    if (!decrementBtn || !incrementBtn || !display || !displayWrapper) return;
 
     let count = 0;
 
+    const updateDisplay = () => {
+        display.textContent = count;
+
+        // Update colour state on the display value
+        display.classList.toggle('counter__display--positive', count > 0);
+        display.classList.toggle('counter__display--negative', count < 0);
+
+        // Update colour state on the wrapper border / background
+        displayWrapper.classList.toggle('counter__display-wrapper--positive', count > 0);
+        displayWrapper.classList.toggle('counter__display-wrapper--negative', count < 0);
+
+        // Trigger bump animation: remove then re-add the class
+        display.classList.remove('counter__display--bump');
+        // Force a reflow so the browser registers the removal before re-adding
+        void display.offsetWidth;
+        display.classList.add('counter__display--bump');
+    };
+
     incrementBtn.addEventListener('click', () => {
         count += 1;
-        display.textContent = count;
+        updateDisplay();
     });
 
     decrementBtn.addEventListener('click', () => {
         count -= 1;
-        display.textContent = count;
+        updateDisplay();
+    });
+
+    resetBtn.addEventListener('click', () => {
+        count = 0;
+        updateDisplay();
     });
 };
 
